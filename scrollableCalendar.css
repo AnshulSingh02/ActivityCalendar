@@ -1,0 +1,229 @@
+.calenderWidth{
+    width: 443px;
+}
+
+/* #------------------------------------- HORIZONTAL CALENDER ----------------------------------------------- */
+
+
+.horizontalCalenderHeader{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.horizontalCalenderHeader p{
+    margin-left: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: #9336B4;
+}
+
+.horizontalCalenderHeader div{
+    display: flex;
+    flex-direction: row;
+    width: 10%;
+    justify-content: space-between;
+}
+
+.rearrangedDays{
+    display: flex;
+    width: 100%;
+}
+
+.rearrangedDays b{
+    width: 14.28%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: #9376E0;
+}
+
+.weeksDates{
+    width: 100%;
+    display: flex;
+}
+
+.weeksDates div{
+    width: 14.286%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: #9336B4; */
+    cursor: pointer;
+    border: 1px solid #6941C6;
+}
+
+.weeksDates div p{
+    background: #B799FF;
+    border-radius: 20px;
+    width: 50%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size: 12px;
+}
+
+.weeks{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+}
+
+.weeks li{
+    width: calc(100% / 7);
+    position: relative;
+}
+
+.weekDates{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+
+}
+
+.weekDates li{
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    z-index: 1;
+    width: calc(100% / 7);
+    position: relative;
+}
+
+.weekDates li::before{
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 30px;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.weekDates li:hover::before{
+    background: #f2f2f2;
+    color: black;
+}
+
+/* #------------------------------------- VERTICAL CALENDER ----------------------------------------------- */
+
+
+.verticalCalender{
+    width: 443px; 
+    height: 84vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.verticalCalender::-webkit-scrollbar {
+    width: 6px;
+}
+
+.verticalCalender::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #ffffff; 
+    border-radius: 10px;
+}
+
+.verticalCalender::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 8px #40128B; 
+}
+
+.calender ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+}
+
+.calender ul li{
+    width: calc(100% / 7);
+    position: relative;
+}
+
+.months header{
+    display: flex;
+    padding: 5px 0px 0px 15px;
+    color: #9336B4;
+}
+
+.current_date{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.weeks li{
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.currentMonthDays{
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    z-index: 1;
+}
+
+.currentMonthDays::before{
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 30px;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.currentMonthDays:hover::before{
+    background: #f2f2f2;
+    color: black;
+}
+
+.active{
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    z-index: 1;
+    color: #ffffff;
+}
+
+.active::before{
+    position: absolute;
+    content: '';
+    background: #9376E0;
+    height: 30px;
+    width: 30px;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.active:hover::before{
+    background: #B799FF;
+}
+
+.prevMonthDays{
+    color: slategray;
+    margin-top: 30px;
+    font-size: 0.75rem;
+    z-index: 1;
+    cursor: none;
+}
